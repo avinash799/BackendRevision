@@ -1,0 +1,11 @@
+class ValidationError extends ApiError {
+    constructor(errors) {
+        super(
+            400, // HTTP status code for bad request
+            "Validation error", // General message for validation errors
+            errors // List of validation errors (passed as an array)
+        );
+    }
+}
+
+export { ValidationError };
